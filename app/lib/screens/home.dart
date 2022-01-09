@@ -17,6 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+          centerTitle: true,
           title: Text(widget.title),
         ),
         body: Container(      
@@ -45,10 +46,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                 title: Text(snapshot.data![i]['title']),
                                 subtitle: Text(snapshot.data![i]['author']),
                                 onTap: () => {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                                      return DetailBook();
-                                    }
-                                    ))
+                                    Navigator.of(context).push(
+                                      MaterialPageRoute(builder: (context) => DetailBook(
+                                        title: snapshot.data![i]['title'],
+                                        author: snapshot.data![i]['author'],
+                                        pub: snapshot.data![i]['publishing_company'],
+                                        pages: snapshot.data![i]['pages'],
+                                        img: snapshot.data![i]['images'],
+                                        resume: snapshot.data![i]['resume'],
+                                      )))
                                   },
                               ),
                               Container(
