@@ -41,8 +41,8 @@ class DetailBook extends StatelessWidget {
         Hero(
           tag: img,
           child: Image.network(img,
-            height: 150.0,
-            width: 100.0,
+            height: 250.0,
+            width: 250.0,
             fit: BoxFit.contain,
           ),
          
@@ -56,7 +56,6 @@ class DetailBook extends StatelessWidget {
                       fontFamily: 'Varela',
                       fontSize: 24.0)),
             ),
-          
             SizedBox(height: 20.0),
             Center(
               child: Container(
@@ -71,23 +70,31 @@ class DetailBook extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20.0),
-
-            Center(
-                child: Text(pub,
-                    style: TextStyle(
-                        color: Color(0xFF575E67),
-                        fontFamily: 'Varela',
-                        fontSize: 24.0)),
-              ),
-              SizedBox(height: 10.0),
-            Center(
-                child: Text('Páginas: $pages',
-                    style: TextStyle(
-                        color: Color(0xFF575E67),
-                        fontFamily: 'Varela',
-                        fontSize: 24.0)),
-              ),
+            SizedBox(height: 30.0),
+            Column(
+              children: [
+                  Padding(
+                  padding: const EdgeInsets.only(left: 30,right: 30),
+                  child: Row(              
+                    children: [               
+                      Text('Editora: $pub',
+                          style: TextStyle(
+                              color: Color(0xFF575E67),
+                              fontFamily: 'Varela',
+                              fontSize: 15.0)),
+                      Spacer(),
+                      Text('Páginas: $pages',
+                          style: TextStyle(
+                              color: Color(0xFF575E67),
+                              fontFamily: 'Varela',
+                              fontSize: 15.0)),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+           
+            
         ],
       ),
     );
