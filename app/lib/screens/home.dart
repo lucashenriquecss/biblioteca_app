@@ -45,9 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
                                 title: Text(snapshot.data![i]['title']),
                                 subtitle: Text(snapshot.data![i]['author']),
                                 onTap: () => {
-                                    Navigator.of(context).push(MaterialPageRoute(builder: (c) {
+                                    Navigator.of(context).push(MaterialPageRoute(builder: (context) {
                                       return DetailBook();
-                                    }))
+                                    }
+                                    ))
                                   },
                               ),
                               Container(

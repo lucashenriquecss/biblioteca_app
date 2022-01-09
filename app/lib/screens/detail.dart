@@ -20,9 +20,13 @@ class _DetailBookState extends State<DetailBook> {
             return ListView.builder(
                 itemCount: snapshot.data?.length, // contagem de cards
                 itemBuilder: (context, i) {
-                  return Container(
-                    
-                    
+                  return Container(                   
+                     child: 
+                 ListTile(
+                        title: Text(snapshot.data![i]['title']),
+                        subtitle: Text(snapshot.data![i]['author']),
+                               
+                   ),
                   );
                 });
           } else {
