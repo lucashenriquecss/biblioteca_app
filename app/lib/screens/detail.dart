@@ -66,7 +66,7 @@ class DetailBook extends StatelessWidget {
                 style: TextStyle(
                       fontFamily: 'Varela',
                       fontSize: 16.0,
-                      color: Color(0xFFB4B8B9))
+                      color: Color(0xFF575E67))
                 ),
               ),
             ),
